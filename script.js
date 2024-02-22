@@ -48,33 +48,33 @@ function playGame (playerSelection, computerSelection) {
 
     if (playerSelection == `rock`) {
         if (computerSelection == `rock`) {
-            console.log(`You tie`);
+            return `You tie :/`;
         }else if (computerSelection == `paper`){
-            console.log(`You lose`);
+            return `You lose :(`;
         }else {
-            console.log(`You win`);
+            return `You win!`;
         }
     }
     else if (playerSelection == `paper`) {
         if (computerSelection == `rock`) {
-            console.log(`You win`);
+            return `You win!`;
         }else if (computerSelection == `paper`){
-            console.log(`You tie`);
+            return `You tie :/`;;
         }else {
-            console.log(`You lose`);
+            return `You lose :(`;
         }
     }
     else {
         if (computerSelection == `rock`) {
-            console.log(`You lose`);
+            return `You lose :(`;
         }else if (computerSelection == `paper`){
-            console.log(`You win`);
+            return `You win!`;
         }else {
-            console.log(`You tie`);
+            return `You tie :/`;
         }
     }
 }
 
-//Output winner or loser of rock, paper, scissors game
+//Output winner or loser of rock, paper, scissors game and prints it into the console
 
-playGame(getMyChoice(), getComputerChoice())
+console.log(playGame(getMyChoice(), getComputerChoice()));
