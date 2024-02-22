@@ -5,6 +5,7 @@
 // return output of rock or paper or scissors 
 // console.log to check
 
+//function that makes the opposing player generate rock, paper, or scissors
 function getComputerChoice () {
 
     let randNumber = Math.random() * 100;
@@ -23,8 +24,8 @@ function getComputerChoice () {
 console.log (getComputerChoice());
 
 
-//Problem: Create a function that takes two parameters and compares them for rock, paper, scissors
-// 
+
+// function that compares my players selection to opposing players selection
 function playGame (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
@@ -57,4 +58,5 @@ function playGame (playerSelection, computerSelection) {
     }
 }
 
+//Output winner or loser of rock, paper, scissors game
 console.log(playGame(`ROCK`, getComputerChoice));
