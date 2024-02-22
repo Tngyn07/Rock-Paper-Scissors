@@ -43,36 +43,38 @@ function getMyChoice () {
 
 // function that compares my players selection to opposing players selection
 function playGame (playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+    console.log(`I chose ${playerSelection}`);
+    console.log(`Your opponent chose ${computerSelection}`);
 
     if (playerSelection == `rock`) {
         if (computerSelection == `rock`) {
-            return `You tie`;
+            console.log(`You tie`);
         }else if (computerSelection == `paper`){
-            return `You lose`;
+            console.log(`You lose`);
         }else {
-            return `You win`;
+            console.log(`You win`);
         }
     }
     else if (playerSelection == `paper`) {
-        if (computerSelection = `rock`) {
-            return `You win`;
-        }else if (computerSelection = `paper`){
-            return `You tie`;
+        if (computerSelection == `rock`) {
+            console.log(`You win`);
+        }else if (computerSelection == `paper`){
+            console.log(`You tie`);
         }else {
-            return `You lose`;
+            console.log(`You lose`);
         }
     }
     else {
-        if (computerSelection = `rock`) {
-            return `You lose`;
-        }else if (computerSelection = `paper`){
-            return `You win`;
+        if (computerSelection == `rock`) {
+            console.log(`You lose`);
+        }else if (computerSelection == `paper`){
+            console.log(`You win`);
         }else {
-            return `You tie`;
+            console.log(`You tie`);
         }
     }
 }
 
 //Output winner or loser of rock, paper, scissors game
-console.log(playGame(`ROCK`, getComputerChoice));
+
+playGame(getMyChoice(), getComputerChoice())
