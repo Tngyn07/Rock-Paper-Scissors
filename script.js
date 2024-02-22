@@ -21,7 +21,23 @@ function getComputerChoice () {
     }
 }
 
-console.log (getComputerChoice());
+// function that generates my players pick of rock, paper, or scissors
+function getMyChoice () {
+
+    let randNumber = Math.random() * 100;
+
+    if (randNumber > 66) {
+        return `rock`;
+    }
+    else if (randNumber > 33) {
+        return `paper`;
+    }
+    else {
+        return `scissors`;
+    }
+}
+
+// console.log (getComputerChoice());
 
 
 
