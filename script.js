@@ -21,6 +21,9 @@ function getComputerChoice () {
     }
 }
 
+let myPick = prompt(`Choose rock, paper, or scissors`);
+console.log(myPick);
+
 // function that generates my players pick of rock, paper, or scissors
 function getMyChoice () {
 
@@ -42,7 +45,7 @@ function getMyChoice () {
 
 
 // function that compares my players selection to opposing players selection
-function playGame (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
     console.log(`I chose ${playerSelection}`);
     console.log(`Your opponent chose ${computerSelection}`);
 
@@ -77,4 +80,20 @@ function playGame (playerSelection, computerSelection) {
 
 //Output winner or loser of rock, paper, scissors game and prints it into the console
 
-console.log(playGame(getMyChoice(), getComputerChoice()));
+console.log(playRound(getMyChoice(), getComputerChoice()));
+
+
+// Problem: Create a function that plays 5 games of rock, paper, scissors, and keeps track of the score
+// So far I already created a function that returns the results of one singular game 
+// Most likely have to implement a loop and some kind of counter variable to keep track of game
+// Create a loop where i = 0, i < 5, i++ and this should loop 5 times simulating 5 games
+// Create a variable or expression that keeps track of wins and losses (Maybe if else statement)
+// Create an if else statement that displays the winner after 5 rounds
+
+for (let i = 0; i < 5; i++) {
+   let result = playRound(getMyChoice(), getComputerChoice())
+
+    if (result == `You win!`) {
+
+    }
+}
