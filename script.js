@@ -10,14 +10,51 @@ function getComputerChoice () {
     let randNumber = Math.random() * 100;
 
     if (randNumber > 66) {
-        return `Rock`;
+        return `rock`;
     }
     else if (randNumber > 33) {
-        return `Paper`;
+        return `paper`;
     }
     else {
-        return `Scissors`;
+        return `scissors`;
     }
 }
 
 console.log (getComputerChoice());
+
+
+//Problem: Create a function that takes two parameters and compares them for rock, paper, scissors
+// 
+function playGame (playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+
+    if (playerSelection == `rock`) {
+        if (computerSelection == `rock`) {
+            return `You tie`;
+        }else if (computerSelection == `paper`){
+            return `You lose`;
+        }else {
+            return `You win`;
+        }
+    }
+    else if (playerSelection == `paper`) {
+        if (computerSelection = `rock`) {
+            return `You win`;
+        }else if (computerSelection = `paper`){
+            return `You tie`;
+        }else {
+            return `You lose`;
+        }
+    }
+    else {
+        if (computerSelection = `rock`) {
+            return `You lose`;
+        }else if (computerSelection = `paper`){
+            return `You win`;
+        }else {
+            return `You tie`;
+        }
+    }
+}
+
+console.log(playGame(`ROCK`, getComputerChoice));
