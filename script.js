@@ -112,10 +112,10 @@ for (let i = 0; i < 5; i++) {
 let gameResults;
 
     if (winCount > lossCount) {
-        gameResults = `Congratulations! You win the game!`;
+        gameResults = `Congratulations! The score is ${winCount}-${lossCount}. You win the game!`;
     }
     else {
-        gameResults = `Darn! You lose the game :(`;
+        gameResults = `Darn! The score is ${winCount}-${lossCount}. You lose the game :(`;
     }
 
     console.log(gameResults);
