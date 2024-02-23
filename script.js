@@ -85,7 +85,7 @@ function playRound (playerSelection, computerSelection) {
 
 
 //loop that simulates 5 rounds of rock paper scissors
-//If win, winCount variable increases and if loss, lossCount variable goes up
+//If win, winCount variable increments and if loss, lossCount variable increments
 // Tie repeats the loop
 
 let winCount = 0;
@@ -101,6 +101,7 @@ for (let i = 0; i < 5; i++) {
         lossCount = ++lossCount;
     }
     else {
+        //makes it so that if you tie, the index gets decremented and will run the match again
         --i;
     }
 
@@ -111,10 +112,10 @@ for (let i = 0; i < 5; i++) {
 let gameResults;
 
     if (winCount > lossCount) {
-        gameResults = `Congratulations! You win!`;
+        gameResults = `Congratulations! You win the game!`;
     }
     else {
-        gameResults = `Darn! You lose :(`;
+        gameResults = `Darn! You lose the game :(`;
     }
 
     console.log(gameResults);
