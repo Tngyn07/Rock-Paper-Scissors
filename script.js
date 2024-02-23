@@ -21,9 +21,6 @@ function getComputerChoice () {
     }
 }
 
-let myPick = prompt(`Choose rock, paper, or scissors`);
-console.log(myPick);
-
 // function that generates my players pick of rock, paper, or scissors
 function getMyChoice () {
 
@@ -40,14 +37,12 @@ function getMyChoice () {
     }
 }
 
-// console.log (getComputerChoice());
-
 
 
 // function that compares my players selection to opposing players selection
 function playRound (playerSelection, computerSelection) {
-    console.log(`I chose ${playerSelection}`);
-    console.log(`Your opponent chose ${computerSelection}`);
+    // console.log(`I chose ${playerSelection}`);
+    // console.log(`Your opponent chose ${computerSelection}`);
 
     if (playerSelection == `rock`) {
         if (computerSelection == `rock`) {
@@ -77,23 +72,49 @@ function playRound (playerSelection, computerSelection) {
         }
     }
 }
-
-//Output winner or loser of rock, paper, scissors game and prints it into the console
-
-console.log(playRound(getMyChoice(), getComputerChoice()));
+//Function that outputs winnner of the single game of rock paper scissors
+// playRound(getMyChoice(), getComputerChoice());
 
 
 // Problem: Create a function that plays 5 games of rock, paper, scissors, and keeps track of the score
 // So far I already created a function that returns the results of one singular game 
-// Most likely have to implement a loop and some kind of counter variable to keep track of game
+// Most likely have to implement a loop and some kind of counter variable to keep track of game score
 // Create a loop where i = 0, i < 5, i++ and this should loop 5 times simulating 5 games
-// Create a variable or expression that keeps track of wins and losses (Maybe if else statement)
+// Create a variable or expression that keeps track of wins and losses
 // Create an if else statement that displays the winner after 5 rounds
 
+
+//loop that simulates 5 rounds of rock paper scissors
+//If win, winCount variable increases and if loss, lossCount variable goes up
+// Tie repeats the loop
+
+let winCount = 0;
+let lossCount = 0;
+
 for (let i = 0; i < 5; i++) {
-   let result = playRound(getMyChoice(), getComputerChoice())
-
+   let result = playRound(getMyChoice(), getComputerChoice());
+   console.log(result);
     if (result == `You win!`) {
-
+        winCount = ++winCount;
     }
+    else if (result ==`You lose :(`) {
+        lossCount = ++lossCount;
+    }
+    else {
+        --i;
+    }
+
 }
+
+
+//Output the result of the 5 games of rock paper scissors
+let gameResults;
+
+    if (winCount > lossCount) {
+        gameResults = `Congratulations! You win!`;
+    }
+    else {
+        gameResults = `Darn! You lose :(`;
+    }
+
+    console.log(gameResults);
